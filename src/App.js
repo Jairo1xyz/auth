@@ -9,7 +9,7 @@ import { API_KEY, AUTH_DOMAIN, DATABASE_URL, PROJECT_ID,
   from '../my_firebase_keys/firebase_keys';
 
 class App extends Component {
-  componentWillMount(){
+  componentDidMount(){
     firebase.initializeApp({
       apiKey: API_KEY,
       authDomain: AUTH_DOMAIN,

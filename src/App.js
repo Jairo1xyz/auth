@@ -4,17 +4,20 @@ import { View, Text } from 'react-native';
 import firebase from 'firebase';
 import { Header } from './components/common';
 import LoginForm from './components/LoginForm';
+import { API_KEY, AUTH_DOMAIN, DATABASE_URL, PROJECT_ID, 
+  STORAGE_BUCKET, MESSAGING_SENDER_ID, APP_ID }
+  from '../my_firebase_keys/firebase_keys';
 
 class App extends Component {
   componentWillMount(){
     firebase.initializeApp({
-      apiKey: 'AIzaSyD0yr73KFFjSGZcYWxyB965-N3ULUaOIew',
-      authDomain: 'authentication-cb581.firebaseapp.com',
-      databaseURL: 'https://authentication-cb581.firebaseio.com',
-      projectId: 'authentication-cb581',
-      storageBucket: '',
-      messagingSenderId: '547554416899',
-      appId: '1:547554416899:web:ed7d3b9838636a25',
+      apiKey: API_KEY,
+      authDomain: AUTH_DOMAIN,
+      databaseURL: DATABASE_URL,
+      projectId: PROJECT_ID,
+      storageBucket: STORAGE_BUCKET,
+      messagingSenderId: MESSAGING_SENDER_ID,
+      appId: APP_ID,
     });
   }
 
